@@ -2,10 +2,10 @@
 const express = require("express");
 const app = express();
 const logger = require("morgan");
-// const seed = require("./seeders/seed.js");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3000;
-const db = require("./models");
+// const db = require("./models");
+// const seed = require("./seeders/seed.js");
 
 app.use(logger("dev"));
 
@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 require("./routes/htmlRoutes")(app);
-// require("./routes/apiRoutes")(app);
+require("./routes/apiRoutes")(app);
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutDB", {
   useNewUrlParser: true,

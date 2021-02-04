@@ -18,13 +18,11 @@ const WorkoutSchema = new Schema({
       },
       duration: {
         type: Number,
-        trim: true,
         required: "Duration is required",
         min: 1,
       },
-      duration: {
+      distance: {
         type: Number,
-        trim: true,
         min: 1,
       },
       weight: {
