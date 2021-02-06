@@ -25,8 +25,8 @@ In this project we use a MongoDB database with a Mongoose schema and handle rout
 
 
 ## Installation Instructions: 
-npm i 
-npm run seed
+1) npm i 
+2) npm run seed
 
 
 ## Test Command: 
