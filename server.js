@@ -15,16 +15,13 @@ app.use(express.static("public"));
 require("./routes/htmlRoutes")(app);
 require("./routes/apiRoutes")(app);
 
-mongoose.connect(
-  process.env.MONGODB_URI ||
-    "mongodb+srv://ReindeerCode:rootroot@cluster0.tu6ro.mongodb.net/workoutDB",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-  }
-);
+//mongodb+srv://ReindeerCode:rootroot@cluster0.tu6ro.mongodb.net/workoutDB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutDB", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+});
 //**end dependencies */
 
 app.listen(PORT, () => {
