@@ -29,17 +29,6 @@ module.exports = function (app) {
     });
   });
 
-  // //update total duration
-  // app.get("/api/workouts", (req, res) => {
-  //   db.Workout.find({}, (error, data) => {
-  //     if (error) {
-  //       res.send(error);
-  //     } else {
-  //       res.json(data);
-  //     }
-  //   });
-  // });
-
   //add new workout
   app.put("/api/workouts/:id", (req, res) => {
     db.Workout.findByIdAndUpdate(
