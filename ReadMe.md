@@ -52,7 +52,7 @@ Following screen shot is of the Dashboard screen
 
 Following screen shot is of the Add Workout screen
 
-![Project Screenshot](./public/assets/lastWorkout.png)
+![Project Screenshot](./public/assets/addWorkout.png)
 
 
 
