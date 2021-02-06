@@ -51,12 +51,23 @@ module.exports = function (app) {
 
   //get Workouts InRange
   app.get("/api/workouts/range", (req, res) => {
-    db.Workout.find({}).then((error, data) => {
-      if (error) {
-        res.status(500).json({ err: error });
-      } else {
-        res.json(data);
-      }
-    });
+    db.Workout.find({})
+      .then((data) => {
+        console.log(data);
+        res.json(data ?? []);
+      })
+      .catch((err) => {
+        res.json(err);
+      });
   });
+
+  // app.get("/api/workouts/range", (req, res) => {
+  //   db.Workout.find({}).then((error, data) => {
+  //     if (error) {
+  //       res.status(500).json({ err: error });
+  //     } else {
+  //       res.json(data);
+  //     }
+  //   });
+  // });
 };
