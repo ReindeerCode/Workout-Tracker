@@ -8,16 +8,13 @@ module.exports = function (app) {
 
   //add workout
   app.post("/api/workouts", (req, res) => {
-    db.Workout.create(
-      req.body.then((error, data) => {
-        if (error) {
-          res.status(500).json({ err: error });
-        } else {
-          console.log("Nailed it");
-          res.json(data);
-        }
+    db.Workout.create(req.body)
+      .then((data) => {
+        res.json(data);
       })
-    );
+      .catch((err) => {
+        res.json(err);
+      });
   });
 
   //get all workouts
@@ -60,14 +57,4 @@ module.exports = function (app) {
         res.json(err);
       });
   });
-
-  // app.get("/api/workouts/range", (req, res) => {
-  //   db.Workout.find({}).then((error, data) => {
-  //     if (error) {
-  //       res.status(500).json({ err: error });
-  //     } else {
-  //       res.json(data);
-  //     }
-  //   });
-  // });
 };
