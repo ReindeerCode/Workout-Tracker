@@ -1,10 +1,10 @@
-# Project: Portfolio Update
+# Project: Mongo and Mongoose Workout Tracker
 
   Deployed Site Link - > https://fit-workout-tracker.herokuapp.com/
 
 
 ## Table of Contents: 
-- [Project: Portfolio Update](#project-portfolio-update)
+- [Project: Mongo and Mongoose Workout Tracker](#project-mongo-and-mongoose-workout-tracker)
   - [Table of Contents:](#table-of-contents)
   - [License:](#license)
   - [Description:](#description)
